@@ -11,7 +11,7 @@ perkenalan("Hamdana", "Hallo");
 
 echo "<hr>";
 
-$saya = "Wandi";
+$saya = "fajar";
 $ucapanSalam = "Selamat pagi";
 
 // memanggil lagi
