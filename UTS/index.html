@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="page-bg">
+    <div class="container">
+      <div class="card">
+        <h1>Contact Us</h1>
+        <p class="subtitle">Send a message — we'll get back to you shortly.</p>
+
+        <form id="contactForm" action="proses.php" method="POST" autocomplete="off">
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" placeholder="Your name" required />
+          </div>
+
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" required />
+          </div>
+
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Write your message..." required></textarea>
+          </div>
+
+          <button type="submit" class="glow-btn"><span>Send Message</span></button>
+        </form>
+
+        <button id="showHistory" class="glow-btn" style="margin-top:15px; background:linear-gradient(90deg,#00d4ff,#7b61ff);">
+          View Message History
+        </button>
+      </div>
+
+      <div id="historyContainer" class="card" style="display:none; margin-top:25px;">
+        <h2>*Message History</h2>
+        <table id="historyTable">
+          <thead>
+            <tr>
+              <th>No</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Message</th>
+              <th>Time</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+  <script src="script.js"></script>
+</body>
+</html>
